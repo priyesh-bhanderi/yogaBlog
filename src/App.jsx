@@ -9,7 +9,7 @@ function App() {
     <div className="bg-[#EAEAEA]">
       <BrowserRouter>
         <Header />
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-5 mb-5">
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
