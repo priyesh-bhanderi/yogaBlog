@@ -3,7 +3,7 @@ import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
 const HeroCard = () => {
     return (
-        <section className="py-8">
+        <section className="py-6">
             <div className="flex flex-col md:flex-row gap-6 bg-white shadow-lg rounded-2xl overflow-hidden p-4 md:p-6">
                 
                 <img
