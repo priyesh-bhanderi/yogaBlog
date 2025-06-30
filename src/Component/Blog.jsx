@@ -1,11 +1,9 @@
-import { useState } from "react";
 import h1 from '../assets/h1.png';
 import b1 from '../assets/b1.png'
 import b2 from '../assets/b2.png'
 import b3 from '../assets/b3.png'
 import b4 from '../assets/b4.png'
 import b5 from '../assets/b5.png'
-import c1 from '../assets/c1.png'
 import c2 from '../assets/c2.png'
 import c3 from '../assets/c3.png'
 import c4 from '../assets/c4.png'
@@ -15,7 +13,7 @@ import Datepi from "./CustomDatePicker";
 
 const categories = [
     { name: "Exercise", img: h1 },
-    { name: "Family", img: c1 },
+    { name: "Family", img: b1 },
     { name: "Fitness", img: c2 },
     { name: "Foodie", img: c3 },
     { name: "Gadgets", img: c4 },
