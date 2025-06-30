@@ -1,110 +1,120 @@
 import { useState } from "react";
 import h1 from '../assets/h1.png';
+import b1 from '../assets/b1.png'
+import b2 from '../assets/b2.png'
+import b3 from '../assets/b3.png'
+import b4 from '../assets/b4.png'
+import b5 from '../assets/b5.png'
+import c1 from '../assets/c1.png'
+import c2 from '../assets/c2.png'
+import c3 from '../assets/c3.png'
+import c4 from '../assets/c4.png'
+import c5 from '../assets/c5.png'
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import Datepi from "./CustomDatePicker";
 
 const categories = [
-  "Exercise",
-  "Family",
-  "Fitness",
-  "Foodie",
-  "Gadgets",
-  "Living"
+    { name: "Exercise", img: h1 },
+    { name: "Family", img: c1 },
+    { name: "Fitness", img: c2 },
+    { name: "Foodie", img: c3 },
+    { name: "Gadgets", img: c4 },
+    { name: "Living", img: c5 }
 ];
 
+const BlogList = [b1, b2, b1, b3, b4, b5]
+
+const PostBlog = [b2, b3, b4]
+
 const Blog = () => {
-  const [value, setValue] = useState(new Date());
 
-  return (
-    <main className="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
-      {/* Blog Posts */}
-      <section className="md:col-span-3">
-        <div className="flex flex-col mb-6">
-          <h2 className="font-bold text-3xl">Recent Blog Posts</h2>
-          <span className="text-xs text-gray-500">See Our Latest Post</span>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {[...Array(6)].map((_, i) => (
-            <div key={i} className="bg-white rounded-xl shadow-md overflow-hidden p-4">
-              <div className="relative">
-                <img src={h1} alt="post" className="w-full h-72 object-cover rounded-md" />
-                <span className="absolute top-3 right-4 bg-[#071C35] text-white text-xs px-2 py-1 rounded">
-                  Exercise
-                </span>
-              </div>
-              <div className="my-4">
-                <h3 className="font-semibold text-xl mb-1">
-                  Etiam mollis libero at placerat feugiat est velit accumsan
-                </h3>
-                <p className="text-sm text-gray-500 mb-2">by Betty – 15 June 2023</p>
-                <p className="text-sm text-gray-600 mb-4">
-                  Vestibulum a pellentesque nunc, at tincidunt odio. Donec aliquet malesuada nisi et semper. Sed tempor nulla id nunc laoreet, in pellentesque purus eleifend.
-                </p>
-                <div className="flex justify-end border-t pt-3">
-                  <a href="#" className="text-sm font-medium text-gray-800 flex items-center gap-1 hover:underline">
-                    <FaRegArrowAltCircleRight className="text-lg" />
-                    Read More
-                  </a>
+    return (
+        <main className="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+            <section className="md:col-span-3">
+                <div className="flex flex-col mb-6">
+                    <h2 className="font-bold text-3xl">Recent Blog Posts</h2>
+                    <span className="text-xs text-gray-500">See Our Latest Post</span>
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
-      {/* Sidebar */}
-      <aside className="md:col-span-2 space-y-12">
-        {/* Featured */}
-        <div>
-          <h4 className="font-bold text-3xl mb-6">Featured Posts</h4>
-          <div className="bg-white p-4 rounded-xl">
-            {[...Array(3)].map((_, i) => (
-              <div key={i} className="flex items-start gap-4 mb-4">
-                <div className="relative">
-                  <img src={h1} alt="featured" className="w-32 h-24 object-cover rounded-lg" />
-                  <span className="absolute top-2 right-2 bg-[#071C35] text-white text-xs px-2 py-0.5 rounded">
-                    Exercise
-                  </span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {BlogList.map((list, i) => (
+                        <div key={i} className="bg-white rounded-xl shadow-md overflow-hidden p-4">
+                            <div className="relative">
+                                <img src={list} alt="post" className="w-full h-72 object-cover rounded-md" />
+                                <span className="absolute top-3 right-4 bg-[#071C35] text-white text-xs px-2 py-1 rounded">
+                                    Exercise
+                                </span>
+                            </div>
+                            <div className="my-4">
+                                <h3 className="font-semibold text-xl mb-1">
+                                    Etiam mollis libero at placerat feugiat est velit accumsan
+                                </h3>
+                                <p className="text-sm text-gray-500 mb-2">by Betty – 15 June 2023</p>
+                                <p className="text-sm text-gray-600 mb-4">
+                                    Vestibulum a pellentesque nunc, at tincidunt odio. Donec aliquet malesuada nisi et semper. Sed tempor nulla id nunc laoreet, in pellentesque purus eleifend.
+                                </p>
+                                <div className="flex justify-end border-t pt-3">
+                                    <a href="#" className="text-sm font-medium text-gray-800 flex items-center gap-1 hover:underline">
+                                        <FaRegArrowAltCircleRight className="text-lg" />
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-sm font-semibold mb-1">
-                    Sed venenatis ultrices nunc at convallis cras eget
-                  </h3>
-                  <p className="text-xs text-gray-600 mb-2">
-                    Donec aliquet malesuada nisi et semper. Sed tempor nulla id nunc laoreet.
-                  </p>
-                  <div className="flex justify-end items-center border-t pt-2">
-                    <a href="#" className="text-xs font-medium text-gray-800 flex items-center gap-1 hover:underline">
-                      <FaRegArrowAltCircleRight className="text-sm" />
-                      Read More
-                    </a>
-                  </div>
+            </section>
+
+            <aside className="md:col-span-2 space-y-12">
+                <div>
+                    <h4 className="font-bold text-3xl mb-6">Featured Posts</h4>
+                    <div className="bg-white p-4 rounded-xl">
+                        {PostBlog.map((list, i) => (
+                            <div key={i} className="flex items-start gap-4 mb-4">
+                                <div className="relative">
+                                    <img src={list} alt="featured" className="w-32 h-24 object-cover rounded-lg" />
+                                    {/* <span className="absolute top-2 right-2 bg-[#071C35] text-white text-xs px-2 py-0.5 rounded">
+                                        Exercise
+                                    </span> */}
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-sm font-semibold mb-1">
+                                        Sed venenatis ultrices nunc at convallis cras eget
+                                    </h3>
+                                    <p className="text-xs text-gray-600 mb-2">
+                                        Donec aliquet malesuada nisi et semper. Sed tempor nulla id nunc laoreet.
+                                    </p>
+                                    <div className="flex justify-end items-center border-t pt-2">
+                                        <a href="#" className="text-xs font-medium text-gray-800 flex items-center gap-1 hover:underline">
+                                            <FaRegArrowAltCircleRight className="text-sm" />
+                                            Read More
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
-        <div>
-          <h4 className="font-bold text-3xl mb-6">Categories</h4>
-          <div className="grid grid-cols-2 gap-4">
-            {categories.map((cat, i) => (
-              <div key={i} className="text-center">
-                <img src={h1} alt={cat} className="w-full rounded" />
-                <p className="font-bold text-sm mt-2">{cat}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+                <div>
+                    <h4 className="font-bold text-3xl mb-6">Categories</h4>
+                    <div className="grid grid-cols-2 gap-4">
+                        {categories.map((cat, i) => (
+                            <div key={i} className="text-center">
+                                <img src={cat.img} alt={cat} className="w-full rounded" />
+                                <p className="font-bold text-sm mt-2">{cat.name}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
 
-        <div>
-          <h4 className="font-bold text-3xl mb-6">Select Date</h4>
-            <Datepi />
-        </div>
-      </aside>
-    </main>
-  );
+                <div>
+                    <h4 className="font-bold text-3xl mb-6">Select Date</h4>
+                    <Datepi />
+                </div>
+            </aside>
+        </main>
+    );
 };
 
 export default Blog;
