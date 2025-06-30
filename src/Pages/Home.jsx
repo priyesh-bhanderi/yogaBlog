@@ -17,7 +17,7 @@ export default function Home() {
     <div className="bg-gray-100">
       {/* Header */}
       <header className="bg-white shadow p-4 flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-blue-800">Chapel House</h1>
+        <h1 className="text-2xl font-bold text-blue-400">Chapel House</h1>
         <nav className="space-x-4 text-gray-700">
           <a href="#">Programs</a>
           <a href="#">Videos</a>
