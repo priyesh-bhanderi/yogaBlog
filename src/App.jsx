@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="bg-[#EAEAEA]">
       <BrowserRouter>
-        {/* <Header /> */}
-        <div className="container mx-auto px-4">
+        <Header />
+        <div className="container mx-auto px-5 mb-5">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blog-details" element={<BlogDetails />} />
