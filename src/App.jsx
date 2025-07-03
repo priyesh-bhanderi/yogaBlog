@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Home from "./Pages/home"
 import Header from "./Component/Header"
 import Footer from "./Component/Footer"
 import BlogDetails from "./Pages/BlogDetails"
+import Home from "./Pages/home"
 
 function App() {
 
-  
+
   return (
     <div className="bg-[#EAEAEA]">
       <BrowserRouter>
