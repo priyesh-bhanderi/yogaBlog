@@ -6,6 +6,7 @@ import BlogDetails from "./Pages/BlogDetails"
 
 function App() {
 
+  
   return (
     <div className="bg-[#EAEAEA]">
       <BrowserRouter>
