@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Header from "./Component/Header"
 import Footer from "./Component/Footer"
 import BlogDetails from "./Pages/BlogDetails"
-import Home from "./Pages/home"
+import LandingPage from "./Pages/LandingPage"
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
         <Header />
         <div className="container mx-auto px-5 mb-5">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<LandingPage />} />
             <Route path="/blog-details" element={<BlogDetails />} />
           </Routes>
         </div>
