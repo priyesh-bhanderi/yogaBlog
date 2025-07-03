@@ -20,6 +20,7 @@ const HeroCard = () => {
                                     src={h1}
                                     alt="author"
                                     className="w-10 h-10 rounded-full object-cover"
+                                    
                                 />
                                 <div>
                                     <p className="font-bold text-md text-gray-900">Betty</p>
