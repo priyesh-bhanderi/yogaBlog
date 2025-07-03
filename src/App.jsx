@@ -6,7 +6,6 @@ import Home from "./Pages/home"
 
 function App() {
 
-
   return (
     <div className="bg-[#EAEAEA]">
       <BrowserRouter>
